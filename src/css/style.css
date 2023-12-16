@@ -9,3 +9,40 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+
+
+
+/* header section */
+
+.logo{
+  display: flex;
+  margin: 15px;
+  padding: 10px;
+}
+
+img{
+  width: 50px;
+}
+.logo p{
+  font-weight: 500;
+}
+.navbar nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* -----------------------------foooter by gaurav------------------------------------- */
+
+.footer1 {
+  position: fixed;
+}
+
+.footer-detail {
+  text-align: center;
+  padding: 5px;
+  margin-top: 5px;
+}
