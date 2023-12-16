@@ -1,15 +1,26 @@
-// The following code starts Mock Service Worker tool which allows you to simulate a backend (an API) for building your apps that talk to a remote service. You can visit https://mswjs.io for details on this utility and check src/api/routes.js for a sample API route that you can edit/create as needed to simulate a real world API. This simulated backend will not be part of the completed application (built edition) and you must use a real world backend built using Node.js + Express or Java + Spring Boot to provide such a service.
+import res from "express/lib/response";
+// import { Result } from "postcss";
+import { createApi } from "unsplash-js";
+// import { photos } from "unsplash-js/dist/internals";
 
-// If you do not require a simulated backend, you can remove the code shown below.
+const main = document.querySelectorAll('#main');
+const unsplash = createApi({
+  accessKey:'000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU',
+});
 
-const apiStatus = document.querySelector('#api-status');
+unsplash.search.getPhotos({
+  query:'Classic Art',
+  page:1,
+  perPage:12,
+  orientation:'portrait'
+}).then(result => {
+  if(result.type === 'success'){
+    const photos = result.response.results;
+    const getUrls = photos.map((i) => {
+      return `<img src = "${i.urls.small}" />`;
+    });
+    main.innerhtml = getUrls.join('');
 
-if (import.meta.env.DEV) {
-  import('../api/browser')
-    .then(({ worker }) => worker.start())
-    .then(() => fetch('/'))
-    .then((res) => res.json())
-    .then((res) => (apiStatus.innerText = res.message));
-}
-
+  }
+});
 
