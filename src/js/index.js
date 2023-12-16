@@ -4,7 +4,6 @@ const maincontent = document.querySelectorAll('#maincontent');
 const unsplash = createApi({
   accessKey:"000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU",
 });
-
 unsplash.search.getPhotos({
   query:'Classic Art',
   page:1,
