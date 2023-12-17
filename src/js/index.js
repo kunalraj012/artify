@@ -1,4 +1,4 @@
-import {createApi} from 'unsplash-js'
+// import {createApi} from 'unsplash-js'
 
 const accessKey = "vQMsVs2qIFA-STFTyhRgnYCOUL2UauZqwLotPJR6z8Q";
 
@@ -11,25 +11,25 @@ const defaultcontent = document.getElementById("defaultcontent");
 
 
 
-const unsplash = createApi({
-  accessKey: '000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU',
-});
-unsplash.search.getPhotos({
-  query:'Classic Art',
-  page:1,
-  perPage:20,
-  orientation:'portrait',
-}).then(result => {
-  if (result.type === 'success') {
-    const photos = result.response.results;
-    console.log(photos);
-    const getUrls = photos.map((i) => {
-      return `<img src="${i.urls.small}" />`;
-    });
-    console.log(getUrls);
-    defaultcontent.innerHTML = getUrls.join('');
-  }
-});
+// const unsplash = createApi({
+//   accessKey: '000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU',
+// });
+// unsplash.search.getPhotos({
+//   query:'Classic Art',
+//   page:1,
+//   perPage:20,
+//   orientation:'portrait',
+// }).then(result => {
+//   if (result.type === 'success') {
+//     const photos = result.response.results;
+//     console.log(photos);
+//     const getUrls = photos.map((i) => {
+//       return `<img src="${i.urls.small}" />`;
+//     });
+//     console.log(getUrls);
+//     defaultcontent.innerHTML = getUrls.join('');
+//   }
+// });
 
 
 let keyword = "";
