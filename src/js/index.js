@@ -61,10 +61,6 @@ searchForm.addEventListener("submit", (e) => {
   searchImages();
 });
 
-showMoreBtn.addEventListener("click", () => {
-  page++;
-  searchImages();
-});
 
 // Call the function to show random images on page load
 showRandomImages();
