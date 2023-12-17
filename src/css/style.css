@@ -203,20 +203,7 @@ form button:hover{
 
 
 
-/* main by shubham */
-
-
-#show-more-btn {
-  background: #ff3929;
-  color: #fff;
-  border: 0;
-  outline: 0;
-  padding: 10px 20px;
-  border-radius: 4px;
-  margin: 100px auto 100px;
-  cursor: pointer;
-  display: none;
-}
+/* main */
 
 #main {
   margin-top: -90px;
@@ -238,7 +225,7 @@ form button:hover{
 }
 
 
-/* -----------------------------footer by gaurav------------------------------------- */
+/* -----------------------------footer------------------------------------ */
 
 .footer1 {
   position: relative;
