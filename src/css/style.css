@@ -13,11 +13,12 @@ body {
 
                                               /* header section */
 
+/* NavBar */
 header{
-  /* background: #615cff; */
   border-bottom: 2px solid black;
   height: 20vh;
 }
+
 .main-header {
   margin-bottom: 7px;
 }
@@ -201,7 +202,8 @@ form button:hover{
 
 
 
-                         /* Main */
+
+/* main by shubham */
 
 
 #show-more-btn {
@@ -215,9 +217,11 @@ form button:hover{
   cursor: pointer;
   display: none;
 }
-#main{
+
+#main {
   margin-top: -90px;
 }
+
 #search-result {
   width: 80%;
   margin: 100px auto 50px;
