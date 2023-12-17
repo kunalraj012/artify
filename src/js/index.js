@@ -1,4 +1,4 @@
-const accessKey = "vQMsVs2qIFA-STFTyhRgnYCOUL2UauZqwLotPJR6z8Q";
+const accessKey = "RSCD7MWzGD-ExXxaSQvIk3iR8JDXyWejSucGw73HGqQ";
 
 const searchForm = document.getElementById("search-form");
 const searchBox = document.getElementById("search-box");
@@ -49,6 +49,7 @@ async function searchImages() {
 
     imageLink.appendChild(image);
     searchResult.appendChild(imageLink);
+    console.log(searchResult);
   });
   showMoreBtn.style.display = "block";
 }

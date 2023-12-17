@@ -11,16 +11,17 @@ body {
 }
 
 
-/* header section */
+                                              /* header section */
 
-/* NavBar */
 header{
+  /* background: #615cff; */
   border-bottom: 2px solid black;
   height: 20vh;
 }
 .main-header {
   margin-bottom: 7px;
 }
+  /* NavBar */
 
 nav {
   /* background-color: rgb(28, 43, 51); */
@@ -99,6 +100,7 @@ form {
   width: 80%;
   max-width: 800px;
   margin-top: 14px;
+  margin-right: 58px;
   height: 70px;
   background: #ffffff;
   display: flex;
@@ -122,15 +124,19 @@ form input {
 form button {
   padding: 15px;
   height: 70%;
-  background-color: #ff3929;
+  background-color: #ff0000;
   color: #000000;
   font-size: 18px;
-  border: 0;
+  border: 1px solid black;
   outline: 0;
   /* border-radius: 50px; */
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   cursor: pointer;
+}
+form button:hover{
+  background: #000000;
+  color: #fff;
 }
 
 ::placeholder {
@@ -190,14 +196,12 @@ form button {
   box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
 }
 
-/* Responsive  */
 
 
 
 
 
-
-/* main by shubham */
+                         /* Main */
 
 
 #show-more-btn {
