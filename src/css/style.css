@@ -130,9 +130,11 @@ nav ul li a:hover{
   height: 40px;
 }
 
-.category-btn {
-  margin-top: -40px;
-  margin-left: 21px;
+.category .selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
 }
 
 .bn30 {

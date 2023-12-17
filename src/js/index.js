@@ -1,8 +1,9 @@
 
 // import { response } from "msw";
+import {createApi} from 'unsplash-js'
 import { createApi } from "unsplash-js";
 
-const home = document.querySelector('#maincontent');
+const home = document.querySelector('#main');
 const category = document.querySelectorAll('.category');
 const selected = document.querySelector('.selected');
 
@@ -88,7 +89,7 @@ console.log("function");
 // ];
 
 
-import {createApi} from 'unsplash-js'
+
 
 const maincontent = document.querySelector('#main');
 const unsplash = createApi({
@@ -110,30 +111,3 @@ unsplash.search.getPhotos({
     maincontent.innerHTML = getUrls.join('');
   }
 });
-
- const accessKey = 'YOUR_UNSPLASH_ACCESS_KEY'; // Replace with your actual access key
-
-    const searchImages = async () => {
-      const query = document.getElementById('searchInput').value;
-      const gallery = document.getElementById('gallery');
-
-      try {
-        const response = await fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${accessKey}`);
-        const data = await response.json();
-
-        if (data.results) {
-          gallery.innerHTML = ''; // Clear previous results
-
-          data.results.forEach(result => {
-            const imageElement = document.createElement('div');
-            imageElement.classList.add('image');
-            imageElement.innerHTML = `<img src="${result.urls.small}" alt="${result.alt_description}">`;
-            gallery.appendChild(imageElement);
-          });
-        } else {
-          console.error('No results found');
-        }
-      } catch (error) {
-        console.error('Error fetching images:', error);
-      }
-    };
