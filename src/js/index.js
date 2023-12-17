@@ -9,6 +9,7 @@ const defaultContent = document.getElementById("search-result");
 let keyword = "";
 let page = 1;
 
+
 // Function to fetch and display random images on page load
 async function showRandomImages() {
   const randomUrl = `https://api.unsplash.com/photos/random?count=30&client_id=${accessKey}`;

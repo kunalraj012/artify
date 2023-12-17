@@ -14,10 +14,11 @@ body {
 /* header section */
 
 /* NavBar */
-header{
+header {
   border-bottom: 2px solid black;
   height: 20vh;
 }
+
 .main-header {
   margin-bottom: 7px;
 }
@@ -194,10 +195,25 @@ form button {
 
 
 
+@media screen and (max-width:844px) and (min-width:390px) {
+  .selected {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+  }
+}
+
+@media screen and (max-width:844px) and (min-width:390px) {
+  .search-result {
+    display: inline-flex;
+  }
+}
 
 
 
-/* main by shubham */
+
+
 
 
 #show-more-btn {
@@ -211,9 +227,11 @@ form button {
   cursor: pointer;
   display: none;
 }
-#main{
+
+#main {
   margin-top: -90px;
 }
+
 #search-result {
   width: 80%;
   margin: 100px auto 50px;
