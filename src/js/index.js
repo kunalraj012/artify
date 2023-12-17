@@ -1,23 +1,104 @@
+
+// import { response } from "msw";
 import {createApi} from 'unsplash-js'
+import { createApi } from "unsplash-js";
 
-const accessKey = "vQMsVs2qIFA-STFTyhRgnYCOUL2UauZqwLotPJR6z8Q";
+const home = document.querySelector('#main');
+const category = document.querySelectorAll('.category');
+const selected = document.querySelector('.selected');
 
-const searchForm = document.getElementById("search-form");
-const searchBox = document.getElementById("search-box");
-const searchResult = document.getElementById("search-result");
-const showMoreBtn = document.getElementById("show-more-btn"); 
-const defaultcontent = document.getElementById("defaultcontent");
+let topic = "";
+// function searchimg(){
+//   const searchinput = document.getElementById('searchimg');
+//   topic = searchinput.value;
+//   console.log(topic);
+
+//   getData();
+// }
+
+async function getData(){
+  const responseData = await fetch('https://api.unsplash.com/search/photos/?query=' + input.value + '&per_page=20&client_id=000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU');
+  const mainData = await responseData.JSON();
+  const hits = mainData.hits;
+  allimg.innerHTML = ``;
+
+  document.getElementById('img_changer').innerHTML = `<img src="${hits[1].largeimageURL}" alt = "main-post/>`;
+
+  for(let i=0;i<hits.length;i++){
+    console.log(hits[i]);
+    allimg.insertAdjacentHTML("afterbegin",
+    `<li>
+        <a href="${hits[i].largeImageURL}">
+         <span id="tags">${hits[i].Tags}</span>
+         <img src="${hits[i].previewURL}" alt="${hits[i].Tags}"/>
+        </a>
+      </li>`);
+  }
+}
+getData();
+console.log("function");
+
+// picture selection
+// const picture = [
+//   {
+//     url:
+//     `https://api.unsplash.com/search/photos/?query=' +${Photography} + '&per_page=20&client_id=000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU`,
+//     category:'Photography'
+//   },
+//   {
+//     url:
+//     `https://api.unsplash.com/search/photos/?query=' +${Animals} + '&per_page=20&client_id=000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU`,
+//     category:'Animals'
+
+//   },
+//   {
+//     url:
+//     `https://api.unsplash.com/search/photos/?query=' +${Flower} + '&per_page=20&client_id=000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU`,
+//     category:'Flower'
+
+//   },
+//   {
+//     url:
+//     `https://api.unsplash.com/search/photos/?query=' +${Nature} + '&per_page=20&client_id=000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU`,
+//     category:'Nature'
+
+//   },
+//   {
+//     url:
+//     `https://api.unsplash.com/search/photos/?query=' +${Mountain} + '&per_page=20&client_id=000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU`,
+//     category:'Mountain'
+//   },
+//   {
+//     url:
+//     `https://api.unsplash.com/search/photos/?query=' +${Daylight} + '&per_page=20&client_id=000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU`,
+//     category:'Daylight'
+
+//   },
+//   {
+//     url:
+//     `https://api.unsplash.com/search/photos/?query=' +${NightOut} + '&per_page=20&client_id=000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU`,
+//     category:'NightOut'
+    
+//   },
+//   {
+//     url:
+//     `https://api.unsplash.com/search/photos/?query=' +${Computer} + '&per_page=20&client_id=000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU`,
+//     category:'Computer'
+
+//   },
+// ];
 
 
 
 
+const maincontent = document.querySelector('#main');
 const unsplash = createApi({
   accessKey: '000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU',
 });
 unsplash.search.getPhotos({
   query:'Classic Art',
   page:1,
-  perPage:20,
+  perPage:50,
   orientation:'portrait',
 }).then(result => {
   if (result.type === 'success') {
@@ -27,58 +108,6 @@ unsplash.search.getPhotos({
       return `<img src="${i.urls.small}" />`;
     });
     console.log(getUrls);
-    defaultcontent.innerHTML = getUrls.join('');
-  }
-});
-
-
-let keyword = "";
-let page = 1;
-
-async function searchImages(){
-  keyword = searchBox.value;
-  const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=30`;
-
-  const response = await fetch(url);
-  const data = await response.json();
-
-  if(page === 1){
-    searchResult.innerHTML = "";
+    maincontent.innerHTML = getUrls.join('');
   }
-
-  const results = data.results;
-  results.map((result) => {
-    const image = document.createElement("img");
-    image.src = result.urls.small;
-    const imageLink = document.createElement("a");
-    imageLink.href = result.links.html;
-    imageLink.target = "_blank";
-
-    imageLink.appendChild(image);
-    searchResult.appendChild(imageLink);
-  })
-  showMoreBtn.style.display = "block";
-
-}
-
-searchForm.addEventListener("submit", (e) =>{
-  e.preventDefault();
-  page = 1;
-  searchImages();
-})
-
-showMoreBtn.addEventListener("click", ()=>{
-  page++;
-  searchImages();
-})
-
-
-
-
-
-const maincontent = document.querySelector('#main');
-
-
-
-
-
+});
