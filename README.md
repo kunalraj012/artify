@@ -14,6 +14,19 @@ Team Name ----------------Enemy of Syntax
           linkdin:[https://www.linkedin.com/in/shubham-kumar-783581166/]
           github:[https://github.com/starchastag]
 
+ 4-> Naman Singh 
+          linkdin:[https://www.linkedin.com/in/naman-singh-852b58291/]
+          Github: [https://github.com/Lawliet-19?fbclid=PAAaYQtid4R1oXSQT0oy9K6qG8Sy12QjAZVT3IGvFMyElkadT_DOOjWJnRxB4]
+=======
+ 3->Shubham kumar      
+          linkdin:[https://www.linkedin.com/in/shubham-kumar-783581166/]
+          github:[https://github.com/starchastag]
+
+4->Naman Singh 
+               linkdin:[]
+               github:[]
+>>>>>>> Stashed changes
+
 <---------------------------------------Check out the live Demo-------------------------------------->  
 
 - (https://visionary-stardust-dc6858.netlify.app/)
