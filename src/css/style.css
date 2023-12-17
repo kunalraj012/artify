@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-* {
-  font-family: 'Open Sans', sans-serif;
-}
-
-html,
-body {
-  margin: 0px;
-  padding: 0px;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: ' Poppins', sans-serif;
   box-sizing: border-box;
 }
-
-
+body{
+  /* background: #39297b; */
+  color: #fff;
+}
 
 
 /* header section */
@@ -19,11 +16,11 @@ body {
 /* NavBar */
 
 .main-header {
-  margin-bottom: 70px;
+  margin-bottom: 7px;
 }
 
 nav {
-  /* background-color: #0fa6a1; */
+  /* background-color: #2c2e2e; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,8 +32,9 @@ nav .logo {
 }
 
 nav .logo img {
+  background-color: #fff;
   width: 52px;
-  margin-left: 40px;
+  margin-left: 60px;
   height: 52px;
   padding: 8px;
   border: 2px solid black;
@@ -56,27 +54,30 @@ nav ul {
   flex-wrap: wrap;
   justify-content: flex-start;
   list-style: none;
-}
+} 
 
 nav ul li:hover {
-  /* background-image: linear-gradient(-45deg, #4568dc, #b06ab3); */
-  color: #fff;
-  /* border-radius: 50px; */
+   /* background-image: linear-gradient(-45deg, #4568dc, #b06ab3); */
+   color: #fff; 
+   border-radius: 50px;
 }
 
 nav ul li {
   color: #000000;
-  padding: 22px 40px;
+  padding: 10px 20px;
   /* background: #77f3b9; */
 }
 
-nav ul li.active {
-  background: #b06ab3;
-}
 
 nav ul li a {
-  color: #000000;
-  text-decoration: none;
+  margin-left: 70px;
+  color: #0a0a0a;
+  text-decoration: underline;
+}
+
+nav ul li a:hover{
+  padding: 5px;
+  color: #ff0000;
 }
 
 @keyframes appear {
@@ -91,47 +92,45 @@ nav ul li a {
   }
 }
 
-.login a {
-  margin-left: 170px;
-}
-
-.box {
-  height: 30px;
-  width: 900px;
+form{
+  width: 80%;
+  max-width: 800px;
+  margin-top: 14px;
+  height: 70px;
+  background: #ffffff;
   display: flex;
-  cursor: pointer;
-  padding: 10px 20px;
-  /* background: blueviolet; */
-  margin-left: 250px;
-  margin-top: -10px;
-  border-radius: 30px;
   align-items: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
-
-.box:hover input {
-  width: 850px;
-}
-
-.box input {
-  width: 0;
-  outline: none;
-  border: none;
-  font-weight: 500;
-  transition: 0.8s;
+form input{
+  flex: 1;
+  height: 70%;
+  border: 1px solid black;
+  outline: 0;
   background: transparent;
+  color: #000000;
+  font-size: 18px;
+  padding: 15px;
+  /* border-radius: 50px; */
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
 }
-
-.box a img {
-  color: #1daf;
+form button{
+  padding: 15px;
+  height: 70%;
+  background-color: #ff3929;
+  color: #000000;
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  /* border-radius: 50px; */
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  cursor: pointer;
+}
+::placeholder{
+  color: #000000;
   font-size: 18px;
 }
-
-.box img {
-  width: 50px;
-  height: 40px;
-}
-
 .category .selected {
   display: flex;
   align-items: center;
@@ -147,7 +146,7 @@ nav ul li a {
   -webkit-transform: translate(0);
   transform: translate(0);
   /* background-image: linear-gradient(45deg, #77f3b9, #0fa6a1); */
-  padding: 0.7rem 2rem;
+  padding: 0.5rem 0.1rem;
   border-radius: 65px;
   box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
   -webkit-transition: box-shadow 0.25s;
@@ -183,10 +182,53 @@ nav ul li a {
   box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
 }
 
-.bn30:hover .text {
-  /* background-image: linear-gradient(-45deg, #4568dc, #b06ab3); */
-}
+/* Responsive  */
 
+
+
+
+
+
+/* main by shubham */
+
+
+#show-more-btn{
+  background: #ff3929;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 10px auto 100px;
+  cursor: pointer;
+  display: none;
+}
+#search-result{
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+#search-result img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 5px; 
+}
+#defaultcontent{
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+#defaultcontent img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 5px;
+}
 
 
 /* -----------------------------footer by gaurav------------------------------------- */
@@ -195,6 +237,8 @@ nav ul li a {
   position: relative;
   bottom: 0;
   width: 100%;
+  /* background: #000000; */
+  color: #000000;
 }
 
 .main-footer {
@@ -216,7 +260,8 @@ ul {
 }
 
 .icons {
-  width: 27px;
-  height: 27px;
+  /* background: #fff; */
+  width: 50px;
+  height: 50px;
   padding: 12px;
 }
