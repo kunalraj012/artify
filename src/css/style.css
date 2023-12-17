@@ -20,6 +20,7 @@ body {
 
 .main-header {
   margin-bottom: 70px;
+  
 }
 
 nav {
@@ -58,12 +59,6 @@ nav ul {
   list-style: none;
 }
 
-nav ul li:hover {
-  /* background-image: linear-gradient(-45deg, #4568dc, #b06ab3); */
-  color: #fff;
-  /* border-radius: 50px; */
-}
-
 nav ul li {
   color: #000000;
   padding: 22px 40px;
@@ -73,10 +68,14 @@ nav ul li {
 nav ul li.active {
   background: #b06ab3;
 }
-
 nav ul li a {
   color: #000000;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+nav ul li a:hover{
+  padding: 5px;
+  color: #ff0000;
 }
 
 @keyframes appear {
@@ -92,9 +91,8 @@ nav ul li a {
 }
 
 .login a {
-  margin-left: 170px;
+  margin-left: 110px;
 }
-
 .box {
   height: 30px;
   width: 900px;
@@ -110,7 +108,6 @@ nav ul li a {
 }
 
 .box:hover input {
-
   width: 850px;
 }
 
@@ -186,54 +183,44 @@ nav ul li a {
   /* background-image: linear-gradient(-45deg, #4568dc, #b06ab3); */
 }
 
-/* ---------------------maincontent by shubham */
+/* Responsive  */
 
-.img{
+
+
+
+
+
+/* main by shubham */
+
+
+#main{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 100vw;
+  grid-gap: 10px;
+}
+#main img{
+  transition: all ease-in-out 500ms;
   width: 100%;
   height: 100%;
-  border-radius: 2px;
+  object-fit: cover;
 }
 
-#allimg{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#allimg li{
-  padding: 10px;
-  height: 100%;
-  width: 200px;
-  border-radius: 3px;
-  list-style: none;
-}
-
-#allimg li a{
-  cursor: pointer;
-  text-decoration: none;
-}
-
-#allimg li a img:active{
+#main img:hover{
   transform: scale(0.95);
+  opacity: 0.5;
 }
-
-#allimg li a img:hover{
-  transform: scale(0.35);
-}
-
-
 
 
 
 /* -----------------------------footer by gaurav------------------------------------- */
 
+
 .footer1 {
-  position: fixed;
+  /* position: static; */
   bottom: 0;
   width: 100%;
-  height: 250px;
 }
 
 .main-footer {
@@ -268,6 +255,6 @@ ul {
 .icons {
   width: 50px;
   height: 50px;
-  padding: 10px;
+  padding: 10px;
 
 }
