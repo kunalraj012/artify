@@ -1,48 +1,41 @@
-// import {createApi} from 'unsplash-js'
-
 const accessKey = "vQMsVs2qIFA-STFTyhRgnYCOUL2UauZqwLotPJR6z8Q";
 
 const searchForm = document.getElementById("search-form");
 const searchBox = document.getElementById("search-box");
 const searchResult = document.getElementById("search-result");
-const showMoreBtn = document.getElementById("show-more-btn"); 
-const defaultcontent = document.getElementById("defaultcontent");
-
-
-
-
-// const unsplash = createApi({
-//   accessKey: '000DvTexIa5o0rfXHeKlY66ZdmBh9xqnFNIlOqmmULU',
-// });
-// unsplash.search.getPhotos({
-//   query:'Classic Art',
-//   page:1,
-//   perPage:20,
-//   orientation:'portrait',
-// }).then(result => {
-//   if (result.type === 'success') {
-//     const photos = result.response.results;
-//     console.log(photos);
-//     const getUrls = photos.map((i) => {
-//       return `<img src="${i.urls.small}" />`;
-//     });
-//     console.log(getUrls);
-//     defaultcontent.innerHTML = getUrls.join('');
-//   }
-// });
-
+const showMoreBtn = document.getElementById("show-more-btn");
+const defaultContent = document.getElementById("search-result");
 
 let keyword = "";
 let page = 1;
 
-async function searchImages(){
+// Function to fetch and display random images on page load
+async function showRandomImages() {
+  const randomUrl = `https://api.unsplash.com/photos/random?count=6&client_id=${accessKey}`;
+
+  try {
+    const response = await fetch(randomUrl);
+    const data = await response.json();
+
+    data.forEach((result) => {
+      const randomImage = document.createElement("img");
+      randomImage.src = result.urls.small;
+      defaultContent.appendChild(randomImage);
+    });
+  } catch (error) {
+    console.error("Error fetching random images:", error);
+  }
+}
+
+// Function to search and display images
+async function searchImages() {
   keyword = searchBox.value;
   const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=30`;
 
   const response = await fetch(url);
   const data = await response.json();
 
-  if(page === 1){
+  if (page === 1) {
     searchResult.innerHTML = "";
   }
 
@@ -56,25 +49,20 @@ async function searchImages(){
 
     imageLink.appendChild(image);
     searchResult.appendChild(imageLink);
-  })
+  });
   showMoreBtn.style.display = "block";
-
 }
 
-searchForm.addEventListener("submit", (e) =>{
+searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   page = 1;
   searchImages();
-})
+});
 
-showMoreBtn.addEventListener("click", ()=>{
+showMoreBtn.addEventListener("click", () => {
   page++;
   searchImages();
-})
+});
 
-
-
-
-
-const maincontent = document.querySelector('#main');
-
+// Call the function to show random images on page load
+showRandomImages();
