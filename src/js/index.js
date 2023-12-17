@@ -11,7 +11,7 @@ let page = 1;
 
 // Function to fetch and display random images on page load
 async function showRandomImages() {
-  const randomUrl = `https://api.unsplash.com/photos/random?count=6&client_id=${accessKey}`;
+  const randomUrl = `https://api.unsplash.com/photos/random?count=30&client_id=${accessKey}`;
 
   try {
     const response = await fetch(randomUrl);
