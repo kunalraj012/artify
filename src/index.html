@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your JavaScript Playground</title>
+  <title>Artify</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-  <!-- ------------------Nav by Kunal  -->
+
   <header>
     <div class="main-header">
       <div class="nav">
@@ -20,23 +20,11 @@
             <div class="title">
               Artify
             </div>
-            <ul>
-              <li class="action"><a href="#">Modern Art</a></li>
-              <li><a href="#">Classics</a></li>
-              <li><a href="#">Sculptures</a></li>
-              <li><a href="#">Cubism</a></li>
-              <li><a href="#">Abstract Art</a></li>
-              <li><a href="#">Favourites</a></li>
-
-            </ul>
-            <div class="login">
-              <a href=""><button class="bn30">login/SignUp</button></a>
-            </div>
           </div>
-      </div>
-      <div class="box">
-        <input type="search" name="searchimg" id="searchimg" placeholder="Search AnyPhoto..." onkeyup="searchimg()">
-        <a href=""><img src="assets/search-icon.png" class="search-bar" /></a>
+          <form id="search-form">
+            <input type="text" id="search-box" placeholder="Search anything here....">
+            <button>Search</button>
+          </form>
       </div>
       </nav>
     </div>
@@ -44,41 +32,27 @@
     </div>
     <div class="category">
       <ul class="selected">
-        <li> <a href="/"><button class="bn30">Photography</button></a></li>
-        <li> <a href="/"><button class="bn30">Animals</button></a></li>
-        <li><a href="/"><button class="bn30">Flowers</button></a></li>
-        <li><a href="/"><button class="bn30">Nature</button></a></li>
-        <li><a href="/"><button class="bn30">Mountain</button></a></li>
-        <li><a href="/"><button class="bn30">Daylight</button></a></li>
+        <li> <a href="/"><button class="bn30">Modern Art</button></a></li>
+        <li> <a href="/"><button class="bn30">Classics</button></a></li>
+        <li><a href="/"><button class="bn30">Sculptures</button></a></li>
+        <li><a href="/"><button class="bn30">Cubism</button></a></li>
+        <li><a href="/"><button class="bn30">Abstract Art</button></a></li>
+        <li><a href="/"><button class="bn30">Favourites</button></a></li>
         <li><a href="/"><button class="bn30">NightOut</button></a></li>
         <li><a href="/"><button class="bn30">Computer</button></a></li>
       </ul>
     </div>
   </header>
-  <hr>
 
-
-
-
-
-
-
-
-
-
-  <!-- -------------------------content by shubham  -->
-
-
+ 
 
   <div id="main">
-    <div class="likes">
-      <img src="" alt="">
+    <div id="defaultcontent"></div>
+    <div id="search-result">
+      <button id="show-more-btn">Show more</button>
     </div>
 
   </div>
-  <ul class="allimg">
-
-  </ul>
 
 
 
@@ -87,72 +61,38 @@
 
 
 
+    <!-- -------------------footer by gaurav -->
 
+   <footer class="footer1">
+      <hr>
+      <div class="main-footer">
+        <div>
+          <p class="footer-detail">Copyright &copy; 2023 All Rights Reserved By Artify Gallery</p>
+        </div>
+        <div class="footer-links">
+          <ul class="social-links">
+            <li><a class="facebook" href="https://www.facebook.com/profile.php?id=61554901401375">
+                <img class="icons"
+                  src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Facebook_glyph_svg-128.png"
+                  alt="facebook"></a>
+            </li>
+            <li><a class="instagram" href="#">
+                <img class="icons"
+                  src="https://cdn4.iconfinder.com/data/icons/social-media-black-white-2/600/Instagram_glyph_svg-128.png"
+                  alt="instagram"></li>
+            <li><a class="linkdin" href="#">
+                <img class="icons"
+                  src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Linkedin_glyph_svg-128.png"
+                  alt="linkdin"></li>
+            <li><a class="pinterest" href="#">
+                <img class="icons"
+                  src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Pinterest_glyph_svg-128.png"
+                  alt="pinterset"></li>
+          </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- -------------------footer by gaurav -->
-  <hr>
-  <footer class="footer1">
-    <div class="main-footer">
-      <div>
-        <p class="footer-detail">Copyright &copy; 2023 All Rights Reserved By Artify Gallery</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <ul class="social-links">
-          <li><a class="facebook" href="https://www.facebook.com/profile.php?id=61554901401375">
-              <img class="icons"
-                src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Facebook_glyph_svg-128.png"
-                alt="facebook"></a>
-          </li>
-          <li><a class="instagram" href="#">
-              <img class="icons"
-                src="https://cdn4.iconfinder.com/data/icons/social-media-black-white-2/600/Instagram_glyph_svg-128.png"
-                alt="instagram"></li>
-          <li><a class="linkdin" href="#">
-              <img class="icons"
-                src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Linkedin_glyph_svg-128.png"
-                alt="linkdin"></li>
-          <li><a class="pinterest" href="#">
-              <img class="icons"
-                src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Pinterest_glyph_svg-128.png"
-                alt="pinterset"></li>
-        </ul>
-
-      </div>
-    </div>
-  </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
+    </footer> 
   <script type="module" src="js/index.js"></script>
 </body>
 
