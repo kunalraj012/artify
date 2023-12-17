@@ -1,35 +1,25 @@
 <--------------------------------------Artify Image Gallery-------------------------------------># 
-Team Name ----------------Enemy of Syntax
---------------------------------------------Team Member-----------------
- 1-> Gaurav Shukla (Team Leader) 
-             linkdin : [https://www.linkedin.com/in/gaurav-shukla-1656a728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]
-              github:[https://github.com/gauravshukla111]
+**Team Name ---Enemy of Syntax
+**Team Member-----------------
+ @gauravshukla111 (Team Leader) 
+    linkdin : [https://www.linkedin.com/in/gaurav-shukla-1656a728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]
+    github:[https://github.com/gauravshukla111]
 
- 2->Kunal Raj        
+**Kunal Raj (@kunalraj012)        
   linkdin:[https://www.linkedin.com/in/kunal-raj-64156a236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]
-    github:[https://github.com/kunalraj012]
+  github:[https://github.com/kunalraj012]
 
 
- 3->shubham kumar      
-          linkdin:[https://www.linkedin.com/in/shubham-kumar-783581166/]
-          github:[https://github.com/starchastag]
+**shubham kumar(@starchastag)       
+  linkdin:[https://www.linkedin.com/in/shubham-kumar-783581166/]
+  github:[https://github.com/starchastag]
 
- 4-> Naman Singh 
-          linkdin:[https://www.linkedin.com/in/naman-singh-852b58291/]
-          Github: [https://github.com/Lawliet-19?fbclid=PAAaYQtid4R1oXSQT0oy9K6qG8Sy12QjAZVT3IGvFMyElkadT_DOOjWJnRxB4]
-=======
- 3->Shubham kumar      
-          linkdin:[https://www.linkedin.com/in/shubham-kumar-783581166/]
-          github:[https://github.com/starchastag]
-
-4->Naman Singh 
-               linkdin:[]
-               github:[]
->>>>>>> Stashed changes
-
+**Naman Singh 
+      linkdin:[https://www.linkedin.com/in/naman-singh-852b58291/]
+      Github: [https://github.com/Lawliet-19?fbclid=PAAaYQtid4R1oXSQT0oy9K6qG8Sy12QjAZVT3IGvFMyElkadT_DOOjWJnRxB4]
 <---------------------------------------Check out the live Demo-------------------------------------->  
 
-- (https://visionary-stardust-dc6858.netlify.app/)
+[https://visionary-stardust-dc6858.netlify.app/]
 
 
 
