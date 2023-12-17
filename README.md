@@ -10,6 +10,7 @@ Team Name ----------------Enemy of Syntax
     github:[https://github.com/kunalraj012]
 
 
+<<<<<<< Updated upstream
  3->shubham kumar      
           linkdin:[https://www.linkedin.com/in/shubham-kumar-783581166/]
           github:[https://github.com/starchastag]
@@ -17,6 +18,15 @@ Team Name ----------------Enemy of Syntax
  4-> Naman Singh 
           linkdin:[https://www.linkedin.com/in/naman-singh-852b58291/]
           Github: [https://github.com/Lawliet-19?fbclid=PAAaYQtid4R1oXSQT0oy9K6qG8Sy12QjAZVT3IGvFMyElkadT_DOOjWJnRxB4]
+=======
+ 3->Shubham kumar      
+          linkdin:[https://www.linkedin.com/in/shubham-kumar-783581166/]
+          github:[https://github.com/starchastag]
+
+4->Naman Singh 
+               linkdin:[]
+               github:[]
+>>>>>>> Stashed changes
 
 <---------------------------------------Check out the live Demo-------------------------------------->  
 
@@ -72,13 +82,18 @@ and follow these step--
 <---------------------------------------------get url from unsplash api ------------------------------->
 
 const accessKey = "RSCD7MWzGD-ExXxaSQvIk3iR8JDXyWejSucGw73HGqQ";  //store access in variable
+<<<<<<< Updated upstream
  const url = https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=30;
+=======
+ const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=30`;
+>>>>>>> Stashed changes
   >>>>>>>fetching url              
   const response = await fetch(url);
 
   >>>>>>>>>>>>>>>>>>>>> get data from api in json format
   const data = await response.json();
 
+<<<<<<< Updated upstream
 <---------------------------------------------------------------Random Image Loaded------------------------------------------------------------>
 async function showRandomImages() {
   const randomUrl = `https://api.unsplash.com/photos/random?count=30&client_id=${accessKey}`;
@@ -122,6 +137,10 @@ async function searchImages() {
   });
   showMoreBtn.style.display = "block";
 }
+=======
+
+> Your photos are copied in `src/images/photos`.
+>>>>>>> Stashed changes
 
 4. Optionally, you can directly publish the gallery on surge [surge] or [Netlify](https://www.netlify.com/), which offers a free plan. surge instalation by commond
                        -- npm install --global surge
@@ -138,9 +157,15 @@ and open commond prompt with project path - then type      - surge
 You can automatically upload the gallery to [Netlify](https://www.netlify.com/).
 
 For Netlify you just need a free account and then you can run the following command to upload to a new website.
+<<<<<<< Updated upstream
 
 gallery-upload netlify
 
+=======
+```
+gallery-upload netlify
+```
+>>>>>>> Stashed changes
 
 
 You can upload your gallery manually on any static hosting provider,[GitHub Pages](https://pages.github.com/), [Netlify](https://www.netlify.com/) or others. Some scripts for automatic upload of the gallery are under work.
@@ -156,4 +181,27 @@ User search images on topic or catgeory based and get results
 
 User also download the images or save the images .
 
+<<<<<<< Updated upstream
 This is Responsive website
+=======
+This is Responsive website 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
