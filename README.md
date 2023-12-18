@@ -4,24 +4,30 @@
 
 **Team Member-----------------
 
- @gauravshukla111 (Team Leader) 
+ Gaurav Shukla (Team Leader) 
  
     linkdin : [https://www.linkedin.com/in/gaurav-shukla-1656a728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]
     
     github:[https://github.com/gauravshukla111]
+    
 
 **Kunal Raj (@kunalraj012)   
+
 
   linkdin:[https://www.linkedin.com/in/kunal-raj-64156a236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]
   
   github:[https://github.com/kunalraj012]
+  
 
 
-**shubham kumar(@starchastag)      
+**shubham kumar(@starchastag)    
+
 
   linkdin:[https://www.linkedin.com/in/shubham-kumar-783581166/]
   
   github:[https://github.com/starchastag]
+
+  
 
 **Naman Singh 
 
@@ -40,6 +46,7 @@
 
 <-------------------------------------------Overview--------------------------------------------------->
 
+
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Hosting](#hosting)
@@ -47,13 +54,19 @@
 
 
 
-<---------------------------------------------Features:----------------------------------------------->                              
+<---------------------------------------------Features:----------------------------------------------->   
+
+
 * Responsive layout suitable for any device .
 * Search any type of images.
 * Download the images.
 * Home page contains Randomly Images.
 
+* 
+
 ## Installation
+
+
   
 This is the official base template for Create Knowledgehut JS Library.
 
@@ -67,6 +80,8 @@ For more information, please refer to:
 
 <---------------------------------Example Usage-------------------------------------------------------> 
 
+
+
 you can clone this repo on github  [https://github.com/kunalraj012/artify.git]  
 and follow these step--
 * npm install or [npm @knowledgehut/create-js-app]
@@ -76,13 +91,19 @@ and follow these step--
 
 
 <---------------------------------------------unsplsh api --------------------------------------------->
+
+
 1.open unsplash developer or used this link [https://unsplash.com/developers]
 2.signup 
 3.create your api on your apps 
 4.get access key
 
 
+
+
 <---------------------------------------------get url from unsplash api ------------------------------->
+
+
 
 const accessKey = "RSCD7MWzGD-ExXxaSQvIk3iR8JDXyWejSucGw73HGqQ";  //store access in variable
  const url = https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=30;
@@ -97,6 +118,8 @@ const accessKey = "RSCD7MWzGD-ExXxaSQvIk3iR8JDXyWejSucGw73HGqQ";  //store access
 
 4. Optionally, you can directly publish the gallery on surge [surge] or [Netlify](https://www.netlify.com/), which offers a free plan. surge instalation by commond
                        -- npm install --global surge
+
+   
 
 and open commond prompt with project path - then type      - surge
 1.input email
